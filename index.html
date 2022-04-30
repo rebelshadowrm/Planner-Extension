@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Events</h1>
+    <div class="container">
+        <div class="calendar-cards">
+            <template id="card-template">
+                <div class="calendar-card">
+                    <div class="date-container">
+                        <div>
+                            <span>Start: </span>
+                            <p class="date-start"></p>
+                        </div>
+                        <div>
+                            <span>End: </span>
+                            <p class="date-end"></p>
+                        </div>      
+                    </div>
+                    <div class="sect">
+                        <span>Event: </span>
+                        <p class="title"></p>
+                    </div>
+                    <div class="sect">
+                        <span>Description: </span>
+                        <p class="description"></p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</body>
+</html>
+
