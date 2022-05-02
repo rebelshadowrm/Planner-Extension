@@ -5,39 +5,42 @@
 body {
     background: hsl(0deg 0% 10%);
     color: hsl(0deg 0% 90%);
-}
-h1 {
-    text-align: center;
-}
-.container {
-    --gap: 1rem;
-    display: flex;
-    flex-direction: column;
+    height: 600px;
     width: 450px;
-    padding: 1rem;
+    
 }
-.calendar-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-    padding: .5rem;
-    border: 1px solid hsl(0deg 0% 100% / .3);
-    margin-block: var(--gap);
+
+
+/* Calendar Styles
+-------------------------------------------------- */
+
+#calendar-container {
+    height: 100vh;
 }
-.sect {
-    display: flex;
-    gap: var(--gap);
+
+.fc-header-toolbar {
+    /*
+    the calendar will be butting up against the edges,
+    but let's scoot in the header's buttons
+    */
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
-.date-container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap)
-}
-.date-container div {
-    display: flex;
-    flex-direction: row;
-    gap: var(--gap);
-}
+
+#calendar {
+    --fc-today-bg-color: hsl(0deg 0% 0% / .3);
+    --fc-neutral-bg-color: hsl(0deg 0% 9%);
+    --fc-page-bg-color: hsl(0deg 0% 9%);
+    --fc-neutral-text-color: hsl(199, 74%, 37%);
+    --fc-now-indicator-color: hsl(199, 74%, 37%);
+    --fc-highlight-color: hsl(0deg 0% 80% / .075);
+    --fc-border-color: hsl(0deg 0% 35%);
+    --fc-event-bg-color: hsl(210, 10%, 15%);
+    --fc-list-event-hover-bg-color: hsl(0deg 0% 100% / .1);
+    --fc-small-font-size: .75rem;
+ }
+
 
 /*********************************************************************
                             SCROLL BAR STYLE       
