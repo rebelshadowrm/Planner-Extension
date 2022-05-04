@@ -223,12 +223,12 @@ const noteEditBtn = (e) => {
 const deleteNote = async (e) => {
     e.preventDefault()
     const note = e.target.parentNode.parentNode.parentNode
-    const NoteId = e.target.parentNode.parentNode.dataset.id
+    const NoteId = note.dataset.noteid
     const options = {
         method: 'DELETE',
     }
 
-    const res = await customFetch(`${root}${noteApi}${NoteId}`, options)
+    const res = await fetch(`${root}${noteApi}${NoteId}`, options)
     if (res.status === 204) {
         note.remove()
     }
