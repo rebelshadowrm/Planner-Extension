@@ -8,12 +8,61 @@
     <link rel="stylesheet" href="/fullcalendar/main.min.css" defer/>
     <link rel="stylesheet" href="styles.css" defer>
     <script src="/fullcalendar/main.min.js" defer></script>
+    <script src="/fontawesome/min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
+
+    <div class="show" id="form-container">
+        <form id="usernameForm">
+            <h1>Enter your email</h1>
+            <input type="text" name="username" id="username">
+            <input id="submit" type="submit" value="go">
+        </form>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <button id="notesBtn">Notes</button>
+                </li>
+                <li>
+                    <button id="calendarBtn">Calendar</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
     <div id="calendar-container">
         <div id="calendar"></div>
     </div>
+    <div id="notes-container">
+        <div class="notes"></div>
+    </div>
+
+    <template id="note">
+        <div class="note" data-userid="" data-eventid="" data-noteid="" data-color="">
+            <div class="note-title-container">
+                <h2 class="note-title"></h2>
+            </div>
+            <div class="note-body-container" data-type="note">
+                <span class="note-body" role="textbox" contenteditable="false" ></span>
+                <div class="icons">
+                    <a class="delete show" href="">
+                        <i class="fas fa-trash-alt"aria-hidden="true"></i>
+                    </a>            
+                    <a class="edit show" href="">
+                        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+                    </a>     
+                    <a class="save" href="">
+                        <i class="fas fa-save" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div> 
+    </template>
 </body>
 </html>
 
